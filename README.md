@@ -57,7 +57,7 @@ The input JSON file should contain a structure like:
 
 ## Usage
 
-1. Place your JSON file (e.g., `testcase3.json`) in the same directory as `index.js`.
+1. Place your JSON file (e.g., `testcase1.json`) in the same directory as `index.js`.
 2. Run the program by using:
    ```bash
    node index.js
@@ -71,7 +71,7 @@ The input JSON file should contain a structure like:
 
 ## Example
 
-With `testcase3.json` as input, run:
+With `testcase1.json` as input, run:
 ```bash
 node index.js
 ```
