@@ -1,11 +1,11 @@
 const fs = require('fs');
 
-// Function to decode a value from a given base to decimal
+
 function decodeValue(base, value) {
     return parseInt(value, base);
 }
 
-// Function to perform Lagrange interpolation and find the constant term
+
 function lagrangeInterpolation(points) {
     let c = 0;
     const k = points.length;
@@ -26,13 +26,13 @@ function lagrangeInterpolation(points) {
     return c;
 }
 
-// Main function to read JSON input and calculate the constant term
+
 function findConstantTerm(filePath) {
     const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
     const n = data.keys.n;
     const k = data.keys.k;
 
-    // Decode the points
+    
     const points = [];
     for (let i = 1; i <= n; i++) {
         if (data[i]) {
@@ -44,14 +44,14 @@ function findConstantTerm(filePath) {
         }
     }
 
-    // Select the first k points for interpolation
+    
     const selectedPoints = points.slice(0, k);
 
-    // Calculate the constant term using Lagrange interpolation
+    
     const constantTerm = lagrangeInterpolation(selectedPoints);
 
     console.log('Constant term (c):', constantTerm);
 }
 
-// Example usage
+
 findConstantTerm('testcase1.json');
